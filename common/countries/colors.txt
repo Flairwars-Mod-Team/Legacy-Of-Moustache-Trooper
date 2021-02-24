@@ -703,7 +703,7 @@ SHL = {
 	color = rgb { 51 51 255 }
 	color_ui = rgb { 51 51 255 }
 }
-LGE = {
+LRA = {
 	color = rgb { 205 212 228 }
 	color_ui = rgb { 205 212 228 }
 }
