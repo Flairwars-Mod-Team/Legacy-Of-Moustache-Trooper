@@ -1,0 +1,175 @@
+focus_tree = {
+
+country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = LRA
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }	
+	
+	focus = {
+		id = LRA_unite_alliance
+		icon = GFX_goal_generic_construction
+		x = 6
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+		
+	}
+	
+	focus = {
+		id = LRA_prepare_invasion
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LRA_unite_alliance }
+		x = 0
+		y = 1
+		relative_position_id = LRA_unite_alliance
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_rally_troops
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LRA_prepare_invasion }
+		x = -1
+		y = 1
+		relative_position_id = LRA_prepare_invasion
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	
+	
+	focus = {
+		id = LRA_industrial_construction
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LRA_prepare_invasion }
+		x = 1
+		y = 1
+		relative_position_id = LRA_prepare_invasion
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_echo_base_build
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LRA_rally_troops }
+		prerequisite = { focus = LRA_industrial_construction }
+		x = 1
+		y = 1
+		relative_position_id = LRA_rally_troops
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_enlist_troopers
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LRA_echo_base_build }
+		x = 0
+		y = 1
+		relative_position_id = LRA_echo_base_build
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_foreign_volunteers
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LRA_enlist_troopers }
+		x = 0
+		y = 1
+		relative_position_id = LRA_enlist_troopers
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_defense_construction
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LRA_foreign_volunteers }
+		x = 0
+		y = 1
+		relative_position_id = LRA_foreign_volunteers
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_battle_of_echo
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LRA_defense_construction }
+		x = 0
+		y = 1
+		relative_position_id = LRA_defense_construction
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+}
