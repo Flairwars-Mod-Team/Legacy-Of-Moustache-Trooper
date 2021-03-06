@@ -15,7 +15,7 @@ country = {
 	
 	focus = {
 		id = LRA_unite_alliance
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_support_democracy
 		x = 6
 		y = 0
 		cost = 10
@@ -23,13 +23,14 @@ country = {
 			factor = 10
 		}
 		completion_reward = {
+			add_political_power = 120
 		}
 		
 	}
 	
 	focus = {
 		id = LRA_prepare_invasion
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = LRA_unite_alliance }
 		x = 0
 		y = 1
@@ -42,17 +43,18 @@ country = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_timed_idea = { idea = LRA_prepare_invasion_idea days = 490 }
 		}
 	}
 	
 	focus = {
 		id = LRA_rally_troops
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = LRA_prepare_invasion }
 		x = -1
 		y = 1
 		relative_position_id = LRA_prepare_invasion
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -60,17 +62,18 @@ country = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_timed_idea = { idea = LRA_rally_troops_idea days = 210 }
 		}
-	
+	}
 	
 	focus = {
 		id = LRA_industrial_construction
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_production2
 		prerequisite = { focus = LRA_prepare_invasion }
 		x = 1
 		y = 1
 		relative_position_id = LRA_prepare_invasion
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -78,12 +81,18 @@ country = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
 		}
 	}
 	
 	focus = {
 		id = LRA_echo_base_build
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = LRA_rally_troops }
 		prerequisite = { focus = LRA_industrial_construction }
 		x = 1
@@ -102,7 +111,7 @@ country = {
 	
 	focus = {
 		id = LRA_enlist_troopers
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = LRA_echo_base_build }
 		x = 0
 		y = 1
@@ -120,7 +129,7 @@ country = {
 	
 	focus = {
 		id = LRA_foreign_volunteers
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_hol_war_on_pacifism
 		prerequisite = { focus = LRA_enlist_troopers }
 		x = 0
 		y = 1
@@ -138,7 +147,7 @@ country = {
 	
 	focus = {
 		id = LRA_defense_construction
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = LRA_foreign_volunteers }
 		x = 0
 		y = 1
@@ -156,7 +165,7 @@ country = {
 	
 	focus = {
 		id = LRA_battle_of_echo
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = LRA_defense_construction }
 		x = 0
 		y = 1
@@ -169,6 +178,9 @@ country = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			hidden_effect = {
+			load_focus_tree = lego_rebel_war
+			}
 		}
 	}
 
