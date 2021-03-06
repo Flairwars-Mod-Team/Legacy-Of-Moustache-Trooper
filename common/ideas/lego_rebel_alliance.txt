@@ -1,0 +1,43 @@
+ideas = {
+
+	country = {
+		LRA_prepare_invasion_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+	
+			modifier = {
+				consumer_goods_factor = -0.2
+				industrial_capacity_factory = 0.2
+			}
+	
+		}
+		
+		LRA_rally_troops_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+	
+			modifier = {
+				mobilization_speed = 0.25
+				minimum_training_level = -0.2
+				training_time_factor = -0.2
+			}
+	
+		}
+	}
+}
