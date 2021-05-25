@@ -14,7 +14,7 @@ country = {
 	continuous_focus_position = { x = 50 y = 1100 }	
 	
 	focus = {
-		id = LRA_unite_alliance
+		id = LRA_defensive_operations
 		icon = GFX_goal_generic_construction
 		x = 6
 		y = 0
@@ -24,7 +24,204 @@ country = {
 		}
 		completion_reward = {
 		}
-		
+	}
+	
+	focus = {
+		id = LRA_republican_values
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_defensive_operations }
+		x = -6
+		y = 1
+		relative_position_id = LRA_defensive_operations
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_vote_moustache_trooper
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_republican_values }
+		x = -1
+		y = 1
+		relative_position_id = LRA_republican_values
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_defense_republicanism
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_republican_values }
+		x = 1
+		y = 1
+		relative_position_id = LRA_republican_values
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_anarchist_volunteers
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_vote_moustache_trooper }
+		prerequisite = { focus = LRA_defense_republicanism }
+		x = -2
+		y = 1
+		relative_position_id = LRA_vote_moustache_trooper
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_cnt_fai_support
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_anarchist_volunteers }
+		x = -1
+		y = 1
+		relative_position_id = LRA_anarchist_volunteers
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_revolutionary_veterans
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_anarchist_volunteers focus = LRA_invite_trotskyists }
+		x = 1
+		y = 1
+		relative_position_id = LRA_anarchist_volunteers
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = LRA_revolutionary_vanguards
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_cnt_fai_support }
+		prerequisite = { focus = LRA_revolutionary_veterans }
+		x = 1
+		y = 1
+		relative_position_id = LRA_cnt_fai_support
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_anarchist_alliance
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_revolutionary_vanguards }
+		x = 0
+		y = 1
+		relative_position_id = LRA_revolutionary_vanguards
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_invite_trotskyists
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_vote_moustache_trooper }
+		x = 0
+		y = 1
+		relative_position_id = LRA_vote_moustache_trooper
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_invite_trotsky
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_invite_trotskyists }
+		x = 1
+		y = 1
+		relative_position_id = LRA_invite_trotskyists
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_integrate_trotskyists
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_revolutionary_veterans }
+		prerequisite = { focus = LRA_invite_trotsky }
+		x = 1
+		y = 1
+		relative_position_id = LRA_revolutionary_veterans
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_galatic_republic_socialism
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_integrate_trotskyists }
+		x = 0
+		y = 1
+		relative_position_id = LRA_integrate_trotskyists
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_revolutionary_spirit
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_anarchist_alliance focus = LRA_galatic_republic_socialism }
+		x = 1
+		y = 1
+		relative_position_id = LRA_anarchist_alliance
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
 	}
 
 }
