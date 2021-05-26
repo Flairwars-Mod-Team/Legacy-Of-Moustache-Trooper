@@ -76,6 +76,7 @@ country = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = LRA_vote_moustache_trooper }
 		prerequisite = { focus = LRA_defense_republicanism }
+		mutually_exclusive = { focus = LRA_invite_trotskyists }
 		x = -2
 		y = 1
 		relative_position_id = LRA_vote_moustache_trooper
@@ -92,21 +93,6 @@ country = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = LRA_anarchist_volunteers }
 		x = -1
-		y = 1
-		relative_position_id = LRA_anarchist_volunteers
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = LRA_revolutionary_veterans
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = LRA_anarchist_volunteers focus = LRA_invite_trotskyists }
-		x = 1
 		y = 1
 		relative_position_id = LRA_anarchist_volunteers
 		cost = 10
@@ -149,12 +135,44 @@ country = {
 	}
 	
 	focus = {
+		id = LRA_revolutionary_spirit
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_anarchist_alliance focus = LRA_galatic_republic_socialism }
+		x = 1
+		y = 1
+		relative_position_id = LRA_anarchist_alliance
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
 		id = LRA_invite_trotskyists
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = LRA_vote_moustache_trooper }
+		prerequisite = { focus = LRA_defense_republicanism }
+		mutually_exclusive = { focus = LRA_anarchist_volunteers }
 		x = 0
 		y = 1
 		relative_position_id = LRA_vote_moustache_trooper
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_revolutionary_veterans
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_anarchist_volunteers focus = LRA_invite_trotskyists }
+		x = 1
+		y = 1
+		relative_position_id = LRA_anarchist_volunteers
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -210,12 +228,217 @@ country = {
 	}
 	
 	focus = {
-		id = LRA_revolutionary_spirit
+		id = LRA_send_envoys_democracies
 		icon = GFX_goal_generic_construction
-		prerequisite = { focus = LRA_anarchist_alliance focus = LRA_galatic_republic_socialism }
+		prerequisite = { focus = LRA_vote_moustache_trooper }
+		prerequisite = { focus = LRA_defense_republicanism }
+		x = 0
+		y = 1
+		relative_position_id = LRA_defense_republicanism
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_united_front
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_republican_values focus = LRA_seize_military_control }
+		x = 6
+		y = 1
+		relative_position_id = LRA_republican_values
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_bolster_defensive_points
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_united_front }
+		x = -1
+		y = 1
+		relative_position_id = LRA_united_front
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_shuffle_military_council
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_united_front }
 		x = 1
 		y = 1
-		relative_position_id = LRA_anarchist_alliance
+		relative_position_id = LRA_united_front
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_assistance_from_democracies
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_send_envoys_democracies }
+		prerequisite = { focus = LRA_bolster_defensive_points }
+		prerequisite = { focus = LRA_shuffle_military_council }
+		x = 2
+		y = 1
+		relative_position_id = LRA_send_envoys_democracies
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_entrenchment_doctrine
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_send_envoys_democraciese }
+		prerequisite = { focus = LRA_bolster_defensive_points }
+		prerequisite = { focus = LRA_shuffle_military_council }
+		x = 0
+		y = 1
+		relative_position_id = LRA_bolster_defensive_points
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_overseas_investments
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_assistance_from_democracies }
+		prerequisite = { focus = LRA_entrenchment_doctrine }
+		x = 0
+		y = 1
+		relative_position_id = LRA_assistance_from_democracies
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_supply_lines
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_overseas_investments }
+		x = -2
+		y = 1
+		relative_position_id = LRA_overseas_investments
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_study_democratic_tactics
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_assistance_from_democracies }
+		prerequisite = { focus = LRA_entrenchment_doctrine }
+		x = 2
+		y = 1
+		relative_position_id = LRA_assistance_from_democracies
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_invite_democratic_scientists
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_overseas_investments }
+		prerequisite = { focus = LRA_study_democratic_tactics }
+		x = 0
+		y = 1
+		relative_position_id = LRA_overseas_investments
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_develop_inland
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_invite_democratic_scientists }
+		x = 0
+		y = 1
+		relative_position_id = LRA_invite_democratic_scientists
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_invite_military_profs
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_overseas_investments }
+		prerequisite = { focus = LRA_study_democratic_tactics }
+		x = 0
+		y = 1
+		relative_position_id = LRA_study_democratic_tactics
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_adapt_tactics
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_study_democratic_tactics }
+		x = 2
+		y = 1
+		relative_position_id = LRA_study_democratic_tactics
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_win_war_doctrine
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_invite_military_profs }
+		prerequisite = { focus = LRA_adapt_tactics }
+		x = 2
+		y = 1
+		relative_position_id = LRA_invite_military_profs
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -224,4 +447,141 @@ country = {
 		}
 	}
 
+	focus = {
+		id = LRA_seize_military_control
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_defensive_operations }
+		x = 6
+		y = 1
+		relative_position_id = LRA_defensive_operations
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_equip_conscripts
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_seize_military_control }
+		x = -1
+		y = 1
+		relative_position_id = LRA_seize_military_control
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_rebellion_junta
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_shuffle_military_council }
+		prerequisite = { focus = LRA_equip_conscripts }
+		x = 2
+		y = 1
+		relative_position_id = LRA_shuffle_military_council
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_marshal_rebellion
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_rebellion_junta }
+		x = 0
+		y = 1
+		relative_position_id = LRA_rebellion_junta
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_centralised_planning
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_seize_military_control }
+		x = 1
+		y = 1
+		relative_position_id = LRA_seize_military_control
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_rebellion_legion
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_equip_conscripts }
+		prerequisite = { focus = LRA_centralised_planning }
+		x = 2
+		y = 1
+		relative_position_id = LRA_equip_conscripts
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_research_development
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_rebellion_legion }
+		x = -2
+		y = 1
+		relative_position_id = LRA_rebellion_legion
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_modernise_doctrines
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_research_development }
+		x = 0
+		y = 1
+		relative_position_id = LRA_research_development
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_military_reform
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_marshal_rebellion }
+		x = 2
+		y = 1
+		relative_position_id = LRA_marshal_rebellion
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
 }
