@@ -11,11 +11,11 @@ country = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1100 }	
+	continuous_focus_position = { x = 50 y = 1300 }	
 	
 	focus = {
 		id = LRA_defensive_operations
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_military_deal
 		x = 6
 		y = 0
 		cost = 10
@@ -28,8 +28,9 @@ country = {
 	
 	focus = {
 		id = LRA_republican_values
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = LRA_defensive_operations }
+		mutually_exclusive = { focus = LRA_seize_military_control }
 		x = -6
 		y = 1
 		relative_position_id = LRA_defensive_operations
@@ -43,7 +44,7 @@ country = {
 	
 	focus = {
 		id = LRA_vote_moustache_trooper
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_military_academy
 		prerequisite = { focus = LRA_republican_values }
 		x = -1
 		y = 1
@@ -58,7 +59,7 @@ country = {
 	
 	focus = {
 		id = LRA_defense_republicanism
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		prerequisite = { focus = LRA_republican_values }
 		x = 1
 		y = 1
@@ -73,7 +74,7 @@ country = {
 	
 	focus = {
 		id = LRA_anarchist_volunteers
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_spr_masters_of_our_own_fate
 		prerequisite = { focus = LRA_vote_moustache_trooper }
 		prerequisite = { focus = LRA_defense_republicanism }
 		mutually_exclusive = { focus = LRA_invite_trotskyists }
@@ -90,7 +91,7 @@ country = {
 	
 	focus = {
 		id = LRA_cnt_fai_support
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_prc_infiltration
 		prerequisite = { focus = LRA_anarchist_volunteers }
 		x = -1
 		y = 1
@@ -105,7 +106,7 @@ country = {
 
 	focus = {
 		id = LRA_revolutionary_vanguards
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_RAJ_lions_of_the_great_war
 		prerequisite = { focus = LRA_cnt_fai_support }
 		prerequisite = { focus = LRA_revolutionary_veterans }
 		x = 1
@@ -121,7 +122,7 @@ country = {
 	
 	focus = {
 		id = LRA_anarchist_alliance
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = LRA_revolutionary_vanguards }
 		x = 0
 		y = 1
@@ -136,7 +137,7 @@ country = {
 	
 	focus = {
 		id = LRA_revolutionary_spirit
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = LRA_anarchist_alliance focus = LRA_galatic_republic_socialism }
 		x = 1
 		y = 1
@@ -151,7 +152,7 @@ country = {
 	
 	focus = {
 		id = LRA_invite_trotskyists
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_support_fourth_int
 		prerequisite = { focus = LRA_vote_moustache_trooper }
 		prerequisite = { focus = LRA_defense_republicanism }
 		mutually_exclusive = { focus = LRA_anarchist_volunteers }
@@ -168,7 +169,7 @@ country = {
 	
 	focus = {
 		id = LRA_revolutionary_veterans
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = LRA_anarchist_volunteers focus = LRA_invite_trotskyists }
 		x = 1
 		y = 1
@@ -183,7 +184,7 @@ country = {
 	
 	focus = {
 		id = LRA_invite_trotsky
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_fra_loyalty_trotzky
 		prerequisite = { focus = LRA_invite_trotskyists }
 		x = 1
 		y = 1
@@ -198,7 +199,7 @@ country = {
 	
 	focus = {
 		id = LRA_integrate_trotskyists
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = LRA_revolutionary_veterans }
 		prerequisite = { focus = LRA_invite_trotsky }
 		x = 1
@@ -214,7 +215,7 @@ country = {
 	
 	focus = {
 		id = LRA_galatic_republic_socialism
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { focus = LRA_integrate_trotskyists }
 		x = 0
 		y = 1
@@ -229,7 +230,7 @@ country = {
 	
 	focus = {
 		id = LRA_send_envoys_democracies
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = LRA_vote_moustache_trooper }
 		prerequisite = { focus = LRA_defense_republicanism }
 		x = 0
@@ -245,7 +246,7 @@ country = {
 	
 	focus = {
 		id = LRA_united_front
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = LRA_republican_values focus = LRA_seize_military_control }
 		x = 6
 		y = 1
@@ -260,7 +261,7 @@ country = {
 	
 	focus = {
 		id = LRA_bolster_defensive_points
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = { focus = LRA_united_front }
 		x = -1
 		y = 1
@@ -275,7 +276,7 @@ country = {
 	
 	focus = {
 		id = LRA_shuffle_military_council
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = LRA_united_front }
 		x = 1
 		y = 1
@@ -290,7 +291,7 @@ country = {
 	
 	focus = {
 		id = LRA_assistance_from_democracies
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = LRA_send_envoys_democracies }
 		prerequisite = { focus = LRA_bolster_defensive_points }
 		prerequisite = { focus = LRA_shuffle_military_council }
@@ -307,7 +308,7 @@ country = {
 	
 	focus = {
 		id = LRA_entrenchment_doctrine
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = LRA_send_envoys_democraciese }
 		prerequisite = { focus = LRA_bolster_defensive_points }
 		prerequisite = { focus = LRA_shuffle_military_council }
@@ -324,7 +325,7 @@ country = {
 	
 	focus = {
 		id = LRA_overseas_investments
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus = LRA_assistance_from_democracies }
 		prerequisite = { focus = LRA_entrenchment_doctrine }
 		x = 0
@@ -340,7 +341,7 @@ country = {
 	
 	focus = {
 		id = LRA_supply_lines
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = LRA_overseas_investments }
 		x = -2
 		y = 1
@@ -355,7 +356,7 @@ country = {
 	
 	focus = {
 		id = LRA_study_democratic_tactics
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_focus_fra_maquis
 		prerequisite = { focus = LRA_assistance_from_democracies }
 		prerequisite = { focus = LRA_entrenchment_doctrine }
 		x = 2
@@ -371,7 +372,7 @@ country = {
 	
 	focus = {
 		id = LRA_invite_democratic_scientists
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_research
 		prerequisite = { focus = LRA_overseas_investments }
 		prerequisite = { focus = LRA_study_democratic_tactics }
 		x = 0
@@ -402,7 +403,7 @@ country = {
 	
 	focus = {
 		id = LRA_invite_military_profs
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = LRA_overseas_investments }
 		prerequisite = { focus = LRA_study_democratic_tactics }
 		x = 0
@@ -418,7 +419,7 @@ country = {
 	
 	focus = {
 		id = LRA_adapt_tactics
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_focus_fra_maquis
 		prerequisite = { focus = LRA_study_democratic_tactics }
 		x = 2
 		y = 1
@@ -433,7 +434,7 @@ country = {
 	
 	focus = {
 		id = LRA_win_war_doctrine
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = LRA_invite_military_profs }
 		prerequisite = { focus = LRA_adapt_tactics }
 		x = 2
@@ -449,8 +450,9 @@ country = {
 
 	focus = {
 		id = LRA_seize_military_control
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_strike_at_democracy2
 		prerequisite = { focus = LRA_defensive_operations }
+		mutually_exclusive = { focus = LRA_republican_values }
 		x = 6
 		y = 1
 		relative_position_id = LRA_defensive_operations
@@ -464,7 +466,7 @@ country = {
 	
 	focus = {
 		id = LRA_equip_conscripts
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = LRA_seize_military_control }
 		x = -1
 		y = 1
@@ -479,7 +481,7 @@ country = {
 	
 	focus = {
 		id = LRA_rebellion_junta
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = LRA_shuffle_military_council }
 		prerequisite = { focus = LRA_equip_conscripts }
 		x = 2
@@ -495,7 +497,7 @@ country = {
 	
 	focus = {
 		id = LRA_marshal_rebellion
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = LRA_rebellion_junta }
 		x = 0
 		y = 1
@@ -510,7 +512,7 @@ country = {
 	
 	focus = {
 		id = LRA_centralised_planning
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = LRA_seize_military_control }
 		x = 1
 		y = 1
@@ -525,7 +527,7 @@ country = {
 	
 	focus = {
 		id = LRA_rebellion_legion
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = LRA_equip_conscripts }
 		prerequisite = { focus = LRA_centralised_planning }
 		x = 2
@@ -540,9 +542,40 @@ country = {
 	}
 	
 	focus = {
-		id = LRA_research_development
+		id = LRA_inspire_militarism
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = LRA_seize_military_control }
+		x = 3
+		y = 1
+		relative_position_id = LRA_seize_military_control
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_military_construction
 		icon = GFX_goal_generic_construction
+		prerequisite = { focus = LRA_inspire_militarism }
+		x = 0
+		y = 1
+		relative_position_id = LRA_inspire_militarism
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_research_development
+		icon = GFX_focus_research
 		prerequisite = { focus = LRA_rebellion_legion }
+		prerequisite = { focus = LRA_military_construction }
 		x = -2
 		y = 1
 		relative_position_id = LRA_rebellion_legion
@@ -555,10 +588,27 @@ country = {
 	}
 	
 	focus = {
-		id = LRA_modernise_doctrines
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = LRA_research_development }
+		id = LRA_improved_equipment
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LRA_rebellion_legion }
+		prerequisite = { focus = LRA_military_construction }
 		x = 0
+		y = 1
+		relative_position_id = LRA_rebellion_legion
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_modernise_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LRA_research_development }
+		prerequisite = { focus = LRA_improved_equipment }
+		x = 1
 		y = 1
 		relative_position_id = LRA_research_development
 		cost = 10
@@ -571,11 +621,91 @@ country = {
 	
 	focus = {
 		id = LRA_military_reform
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = LRA_marshal_rebellion }
+		prerequisite = { focus = LRA_modernise_doctrines }
+		x = 2
+		y = 2
+		relative_position_id = LRA_marshal_rebellion
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_prepare_counter
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = LRA_military_construction }
+		prerequisite = { focus = LRA_rebellion_legion }
+		mutually_exclusive = { focus = LRA_defensive_tactics }
+		x = 0
+		y = 1
+		relative_position_id = LRA_military_construction
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_operation_strike_back
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = LRA_prepare_counter }
+		x = 0
+		y = 3
+		relative_position_id = LRA_prepare_counter
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_defensive_tactics
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = LRA_military_construction }
+		prerequisite = { focus = LRA_rebellion_legion }
+		mutually_exclusive = { focus = LRA_prepare_counter }
 		x = 2
 		y = 1
-		relative_position_id = LRA_marshal_rebellion
+		relative_position_id = LRA_military_construction
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_echo_base_bastion
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = LRA_defensive_tactics }
+		x = 0
+		y = 3
+		relative_position_id = LRA_defensive_tactics
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = LRA_rebellion_victory
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LRA_revolutionary_spirit focus = LRA_develop_inland focus = LRA_win_war_doctrine focus = LRA_military_reform focus = LRA_operation_strike_back focus = LRA_echo_base_bastion }
+		x = 0
+		y = 1
+		relative_position_id = LRA_win_war_doctrine
 		cost = 10
 		ai_will_do = {
 			factor = 10
