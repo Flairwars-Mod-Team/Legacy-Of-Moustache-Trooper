@@ -1,0 +1,23 @@
+state={
+	id=808
+	name="STATE_808"
+	
+	history={
+		owner = LRA
+		buildings = {
+			infrastructure = 3
+			12512 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = DEN
+		add_core_of = LRA
+
+	}
+	
+	provinces={
+		12512 13238 13239 13241 13240 13242
+	}
+	manpower=2000
+	buildings_max_level_factor=1.000
+}

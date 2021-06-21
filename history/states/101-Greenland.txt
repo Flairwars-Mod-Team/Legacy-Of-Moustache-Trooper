@@ -1,52 +1,22 @@
-state = {
+
+state={
 	id=101
 	name="STATE_101"
-	manpower = 18000
-	
-	state_category = wasteland
-	
-	history = {
+
+	history={
 		owner = LRA
-		victory_points = { 13237 40 }
 		buildings = {
 			infrastructure = 2
-			12512 ={
-				naval_base = 2
-			}
 		}
 		add_core_of = DEN
 		add_core_of = LRA
+
 	}
-	provinces = {
-		10245
-		10636
-		12512
-		13058 
-		13066
-		13236
-		13237
-		13238
-		13239
-		13240
-		13241
-		13242
-		13243
-		13244
-		13245
-		13246
-		13247
-		13248
-		13249
-		13250
-		13251
-		13252
-		13253
-		13254
-		13255
-		13256 
-		13257 
-		13258
-		13259 
-		13260
+
+	provinces={
+		10245 10636 12512 13058 13066 13236 13243 13244 13245 13246 13247 13248 13249 13250 13251 13252 13253 13254 13255 13256 13257 13258 13259 13260 
 	}
+	manpower=13000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
 }
