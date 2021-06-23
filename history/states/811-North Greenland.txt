@@ -1,24 +1,20 @@
-
 state={
-	id=101
-	name="STATE_101"
-
+	id=811
+	name="STATE_811"
+	
 	history={
 		owner = LRA
-		victory_points = {
-			13244 2
-		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 
 		}
 		add_core_of = DEN
 		add_core_of = LRA
 
 	}
-
+	
 	provinces={
-		13066 13243 13244 
+		13058 13250 13251 13252 13253 13254 13255 
 	}
 	manpower=3250
 	buildings_max_level_factor=1.000

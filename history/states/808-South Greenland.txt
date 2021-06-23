@@ -4,6 +4,9 @@ state={
 	
 	history={
 		owner = LRA
+		victory_points = {
+			12512 5
+		}
 		buildings = {
 			infrastructure = 3
 			12512 = {
@@ -20,4 +23,5 @@ state={
 	}
 	manpower=2000
 	buildings_max_level_factor=1.000
+	state_category=wasteland
 }
