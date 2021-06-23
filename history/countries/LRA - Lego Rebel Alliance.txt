@@ -1,4 +1,4 @@
-﻿capital = 
+﻿capital = 807
 
 oob = "LRA_1936"
 if = {
@@ -23,15 +23,18 @@ set_technology = {
 	tech_support = 1		
 	tech_recon = 1
 	tech_engineers = 1
+	early_fighter = 1
+	fighter1
+	CAS1
 }
 
 set_convoys = 15
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1933.7.1"
+	last_election = "1936.1.1"
 	election_frequency = 36
-	elections_allowed = yes
+	elections_allowed = no
 }
 set_popularities = {
 	democratic = 11

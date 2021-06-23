@@ -5,7 +5,7 @@ state={
 	history={
 		owner = LRA
 		victory_points = {
-			12512 5
+			12512 20
 		}
 		buildings = {
 			infrastructure = 3
@@ -21,7 +21,7 @@ state={
 	provinces={
 		12512 13238 13239 13241 13240 13242
 	}
-	manpower=2000
+	manpower=3000
 	buildings_max_level_factor=1.000
 	state_category=wasteland
 }

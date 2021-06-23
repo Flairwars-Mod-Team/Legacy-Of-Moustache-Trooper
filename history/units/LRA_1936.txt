@@ -1,0 +1,118 @@
+﻿division_template = {
+	name = "Lego Militia"
+
+	division_names_group = LRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Lego Infantry"
+
+	division_names_group = LRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Capital Guard Forces"
+		location = 13237
+		division_template = "Lego Infantry"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		name = "Army Group Alpha"
+		location = 13245
+		division_template = "Lego Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	
+	division = {
+		name = "Army Group Beta"
+		location = 13244
+		division_template = "Lego Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	
+	division = {
+		name = "Army Group Charlie"
+		location = 13259
+		division_template = "Lego Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	
+	division = {
+		name = "Brick Rifle Infantry"
+		location = 12512
+		division_template = "Lego Infantry"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		name = "2nd Militia Corp"
+		location = 13254
+		division_template = "Lego Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	
+	division = {
+		name = "1st Militia Corp"
+		location = 13241
+		division_template = "Lego Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+}
+
+air_wings = {
+	807 = {
+		fighter_equipment_1 =  {
+			owner = "LRA" 
+			amount = 96
+		}
+		CAS_equipment_1 =  {
+			owner = "LRA" 
+			amount = 24
+		}
+	}
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "LRA"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 60
+	}
+}
